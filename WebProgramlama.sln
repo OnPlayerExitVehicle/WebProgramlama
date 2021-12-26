@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.31911.196
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebProgramlama", "WebProgramlama\WebProgramlama.csproj", "{C8874E77-19D1-4B55-B457-7457F6874ADA}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebProgramlama", "WebProgramlama\WebProgramlama.csproj", "{71F9B386-9D2E-426B-A352-58A93758DD6A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,15 +11,15 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{C8874E77-19D1-4B55-B457-7457F6874ADA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{C8874E77-19D1-4B55-B457-7457F6874ADA}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{C8874E77-19D1-4B55-B457-7457F6874ADA}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{C8874E77-19D1-4B55-B457-7457F6874ADA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{71F9B386-9D2E-426B-A352-58A93758DD6A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{71F9B386-9D2E-426B-A352-58A93758DD6A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{71F9B386-9D2E-426B-A352-58A93758DD6A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{71F9B386-9D2E-426B-A352-58A93758DD6A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {81CC5345-D343-4E17-83CD-0A6F9A723D4F}
+		SolutionGuid = {9A7A60F3-D139-4504-97DC-6B0B91D9ECE4}
 	EndGlobalSection
 EndGlobal
