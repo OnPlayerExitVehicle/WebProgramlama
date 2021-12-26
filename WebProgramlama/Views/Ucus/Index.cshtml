@@ -1,0 +1,31 @@
+﻿@model List<Ucus>
+@{
+    ViewData["Title"] = "Uçuşlar";
+    Layout = "_Layout";
+}
+<table class="table">
+    <thead>
+        <tr>
+            <th scope="col">
+                <label asp-for="@Model[0].Tarih"></label>
+            </th>
+            <th scope="col">
+                <label asp-for="@Model[0].kalkisId"></label>
+            </th>
+            <th scope="col">
+                <label asp-for="@Model[0].inisId"></label>
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (Ucus item in @Model)
+        {
+            <tr>
+                <td>@item.Tarih</td>
+                <td>@($"{item.kalkis.SehirAdi} ({item.kalkis.UlkeAdi})")</td>
+                <td>@($"{item.inis.SehirAdi} ({item.inis.UlkeAdi})")</td>
+            </tr>
+        }
+    </tbody>
+    <a class="btn btn-link" asp-controller="Ucus" asp-action="UcusOlustur">Uçuş Oluştur</a>
+</table>

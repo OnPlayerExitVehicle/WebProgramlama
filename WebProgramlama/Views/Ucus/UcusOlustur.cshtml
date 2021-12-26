@@ -1,0 +1,20 @@
+﻿@model Ucus
+@{
+    ViewData["Title"] = "Uçuş Oluştur";
+    Layout = "_Layout";
+}
+<form asp-action="UcusOlustur" method="post">
+
+        <label class="form-label" asp-for="Tarih"></label>
+        <input class="form-control" type="datetime-local" asp-for="Tarih"></input>
+
+        <label class="form-label" asp-for="kalkisId"></label>
+        <select class="form-control" class="selectpicker"asp-for="kalkisId" asp-items="@ViewBag.Destinasyonlar"></select>
+
+        <label class="form-label"asp-for="inisId"></label>
+        <select class="form-control" asp-for="inisId" asp-items="@ViewBag.Destinasyonlar"></select>
+
+    <input type="submit" value="Ekle" />
+</form>
+
+
