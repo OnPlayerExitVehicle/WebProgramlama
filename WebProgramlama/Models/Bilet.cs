@@ -10,5 +10,6 @@ namespace WebProgramlama.Models
         [Required] [DisplayName("Alým Tarihi")] public DateTime AlimTarihi { get; set; }
         [Required] [DisplayName("Uçuþ")] public int UcusId { get; set; }
         public Ucus ucus { get; set; }
+        public Kullanici kullanici { get; set; }
     }
 }

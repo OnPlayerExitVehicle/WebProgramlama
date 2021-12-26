@@ -1,0 +1,46 @@
+﻿@using Microsoft.AspNetCore.Identity
+@inject SignInManager<Kullanici> SignInManager
+@inject UserManager<Kullanici> UserManager
+
+<nav id="navbar" class="navbar">
+    <ul>
+        <li>
+            <a class="nav-link" asp-controller="Bilet" asp-action="BiletAl">Bilet Al</a>
+        </li>
+        @if (SignInManager.IsSignedIn(User))
+        {
+            <li>
+                <a class="nav-link" asp-controller="Bilet" asp-action="BiletListele">Biletlerim</a>
+            </li>
+            @if (User.Identity.IsAuthenticated)
+            {
+                @if (User.IsInRole("Admin"))
+                {
+                    <li>
+                        <a class="nav-link" asp-controller="Admin" asp-action="Index">Admin Paneli</a>
+                    </li>
+                }
+                
+            }
+            
+            <li class="nav-link">
+                <form class="form-inline" asp-area="Identity" asp-page="/Account/Logout" asp-route-returnUrl="@Url.Action("Index", "Home", new {area = ""})">
+                    <button type="submit" class="nav-link btn btn-link" style="color: white;">Çıkış Yap</button>
+                </form>
+            </li>
+            <li>
+                <a class="getstarted" asp-area="Identity" asp-page="/Account/Manage/Index" title="Manage">@User.Identity.Name</a>
+            </li>
+        }
+        else
+        {
+            <li>
+                <a class="nav-link" asp-area="Identity" asp-page="/Account/Register">Kayıt Ol</a>
+            </li>
+            <li>
+                <a class="getstarted" asp-area="Identity" asp-page="/Account/Login">Giriş Yap</a>
+            </li>
+        }
+    </ul>
+    <i class="bi bi-list mobile-nav-toggle"></i>
+</nav>

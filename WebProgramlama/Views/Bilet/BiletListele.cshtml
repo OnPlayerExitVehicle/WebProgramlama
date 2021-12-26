@@ -1,0 +1,34 @@
+﻿@model List<Bilet>
+@{
+    ViewData["Title"] = "Biletlerim";
+    Layout = "_Layout2";
+}
+<table class="table table-light">
+    <thead>
+        <tr>
+            <th scope="col">
+                <label asp-for="@Model[0].kullanici.Ad"></label>
+            </th>
+            <th scope="col">
+                <label asp-for="@Model[0].ucus.Tarih"></label>
+            </th>
+            <th scope="col">
+                <label asp-for="@Model[0].ucus.kalkis"></label>
+            </th>
+            <th scope="col">
+                <label asp-for="@Model[0].ucus.inis"></label>
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+    @foreach (Bilet item in @Model)
+    {
+        <tr>
+            <td>@item.kullanici.Ad</td>
+            <td>@item.ucus.Tarih</td>
+            <td>@($"{item.ucus.kalkis.SehirAdi} ({item.ucus.kalkis.UlkeAdi})")</td>
+            <td>@($"{item.ucus.inis.SehirAdi} ({item.ucus.inis.UlkeAdi})")</td>
+        </tr>
+    }
+    </tbody>
+</table>
