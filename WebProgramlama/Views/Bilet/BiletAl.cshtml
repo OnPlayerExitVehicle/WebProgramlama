@@ -1,0 +1,16 @@
+﻿@using Microsoft.AspNetCore.Identity
+@inject SignInManager<Kullanici> SignInManager
+@inject UserManager<Kullanici> UserManager
+@model Bilet
+@{
+    ViewData["Title"] = "Bilet Al";
+    Layout = "_Layout2";
+}
+<form asp-action="BiletAl" method="post">
+    <div class="form-group">
+        <label asp-for="UcusId"></label>
+        <select asp-for="UcusId" asp-items="@ViewBag.Ucuslar">
+        </select>
+    </div>
+    <input type="submit" value="Satın Al" />
+</form>

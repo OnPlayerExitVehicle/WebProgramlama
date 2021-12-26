@@ -1,0 +1,28 @@
+@model List<Destinasyon>
+@{
+    ViewData["Title"] = "Destinasyonlar";
+    Layout = "_Layout";
+}
+<table class="table">
+    <thead>
+    <tr>
+        <th scope="col">
+            <label asp-for="@Model[0].SehirAdi"></label>
+        </th>
+        <th scope="col">
+            <label asp-for="@Model[0].UlkeAdi"></label>
+        </th>
+    </tr>
+    </thead>
+    <tbody>
+    @foreach (Destinasyon item in @Model)
+    {
+        <tr>
+            <td>@item.SehirAdi</td>
+            <td>@item.UlkeAdi</td>
+        </tr>
+    }
+    </tbody>
+</table>
+<a class="btn btn-link" asp-controller="Destinasyon" asp-action="DestinasyonOlustur">Destinasyon Oluþtur</a>
+
